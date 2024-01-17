@@ -1,0 +1,36 @@
+
+::placeholder{
+    color: rgb(225, 25, 25);
+    padding: 10px;
+    font-size: 30px;
+}
+.inputs input{
+    border: 2px solid grey;
+    border-radius: 2px;
+    font-size: 40px;
+}.inputs label{
+    font-size: 40px;
+}
+.allInputs{
+    margin: 20px 0;
+}
+.inputs {
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.btn{
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+    background-color:#A9BCFF;
+    color: #474444;
+    font-size: 40px;
+}
+.UserForm form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+}
