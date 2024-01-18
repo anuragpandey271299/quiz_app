@@ -1,4 +1,5 @@
 const express = require('express');
+const bcrypt = require('bcrypt')
 const user = require('../Models/user');
 
 const router = express.Router();
@@ -10,8 +11,8 @@ router.post('/signupUser', async (req, res) => {
         if (!name || !email || !password) {
             return res.status(400).json({ error: 'Name, email and password required' });
         }
-
-        const addedUser = await user.create({ name, email, password });
+        const encryptedPassword = await bcrypt.hash(password, 10)
+        const addedUser = await user.create({ name, email, password: encryptedPassword });
 
         if (addedUser) {
             return res.status(201).json(addedUser);
