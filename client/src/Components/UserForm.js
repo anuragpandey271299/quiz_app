@@ -39,6 +39,8 @@ function UserForm({ forLogin, onFormSubmit }) {
             }
             const response = await axios.post('http://localhost:5000/loginuser', { email, password })
             console.log(response.data)
+            const jwtoken = response.data.jwt
+            localStorage.setItem('jwtoken',jwtoken)
             if (response.status === 200) {
                 toast.success('LoggedIn successfully')
                 navigate('/homepage')
