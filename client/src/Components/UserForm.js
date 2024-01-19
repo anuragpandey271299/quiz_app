@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styles from './UserForm.module.css'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 function UserForm({ forLogin, onFormSubmit }) {
     const [name, setName] = useState('')
@@ -11,12 +11,13 @@ function UserForm({ forLogin, onFormSubmit }) {
     const [confirmPassword, setConfirmPassword] = useState('')
     const [submitted, setSubmitted] = useState(false)
 
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         setSubmitted(true)
         if (!forLogin) {
-            if(!name||!email||!password){
+            if (!name || !email || !password) {
                 return
             }
             if (password !== confirmPassword) {
@@ -25,21 +26,22 @@ function UserForm({ forLogin, onFormSubmit }) {
             }
             const response = await axios.post('http://localhost:5000/signupuser', { name, email, password })
             console.log(response.data)
-            if(response.status===201){
+            if (response.status === 201) {
                 toast.success('Registered successfully')
                 onFormSubmit(true)
-            }else{
+            } else {
                 alert('invalid')
             }
-        }else{
-            if(!email||!password){
+        } else {
+            if (!email || !password) {
                 toast.warning('Email and password required')
                 return
             }
-            const response = await axios.post('http://localhost:5000/loginuser',{email,password})
+            const response = await axios.post('http://localhost:5000/loginuser', { email, password })
             console.log(response.data)
-            if(response.status===200){
+            if (response.status === 200) {
                 toast.success('LoggedIn successfully')
+                navigate('/homepage')
             }
         }
     }
@@ -86,7 +88,7 @@ function UserForm({ forLogin, onFormSubmit }) {
                 </div>
                 <button className={styles.btn} type='submit'>{forLogin ? 'Login' : 'Sign up'}</button>
             </form>
-            <ToastContainer position='top-center' />
+          
         </div>
     )
 }

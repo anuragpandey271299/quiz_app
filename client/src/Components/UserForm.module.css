@@ -1,6 +1,6 @@
 
-::placeholder{
-    color: rgb(225, 25, 25);
+.inputs input::placeholder{
+    color: red;
     padding: 10px;
     font-size: 30px;
 }
