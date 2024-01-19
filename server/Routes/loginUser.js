@@ -1,6 +1,7 @@
 const express = require('express')
 const bcrypt = require('bcrypt')
 const user = require('../Models/user')
+const jwt=require('jsonwebtoken')
 
 const router = express.Router()
 
@@ -11,7 +12,8 @@ router.post('/loginuser', async (req, res) => {
         if (newUser) {
             const checkPassword = await bcrypt.compare(password, newUser.password)
             if (checkPassword) {
-                res.status(200).send(newUser)
+                const jwtoken=jwt.sign(newUser.toJSON(),process.env.jwt_secret_key,{expiresIn:20})
+                res.status(200).json({'addUser':newUser, 'jwt':jwtoken})
             } else {
                 res.status(401).send('Invalid password')
             }
