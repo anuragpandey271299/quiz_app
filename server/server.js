@@ -6,6 +6,7 @@ const mongoose=require('mongoose')
 const user=require('./Models/user')
 const signupUser=require('./Routes/signupUser') 
 const loginUser=require('./Routes/loginUser')
+const quiz=require('./Models/quiz')
 
 const app=express()
 app.use(bodyParser.urlencoded({extended:false}))

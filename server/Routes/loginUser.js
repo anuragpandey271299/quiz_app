@@ -12,7 +12,7 @@ router.post('/loginuser', async (req, res) => {
         if (newUser) {
             const checkPassword = await bcrypt.compare(password, newUser.password)
             if (checkPassword) {
-                const jwtoken=jwt.sign(newUser.toJSON(),process.env.jwt_secret_key,{expiresIn:20})
+                const jwtoken=jwt.sign(newUser.toJSON(),process.env.jwt_secret_key,{expiresIn:20*2000})
                 res.status(200).json({'addUser':newUser, 'jwt':jwtoken})
             } else {
                 res.status(401).send('Invalid password')
