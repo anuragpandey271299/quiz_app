@@ -7,6 +7,7 @@ const user=require('./Models/user')
 const signupUser=require('./Routes/signupUser') 
 const loginUser=require('./Routes/loginUser')
 const quiz=require('./Models/quiz')
+const addQuiz=require('./Routes/addQuiz')
 
 const app=express()
 app.use(bodyParser.urlencoded({extended:false}))
@@ -16,6 +17,7 @@ app.use(cors())
 
 app.use('/',signupUser)
 app.use('/',loginUser)
+app.use('/',addQuiz)
 
 app.listen(process.env.PORT,()=>{
     mongoose.connect(process.env.MONGODB_URL)
