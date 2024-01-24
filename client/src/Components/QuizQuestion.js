@@ -117,7 +117,7 @@ function QuizQuestion({ onCancel, quizType, quizName }) {
             const response = await axios.post('http://localhost:5000/addquiz', { quizName, quizType, questions }, config)
             console.log(response.data)
             const quizId=nanoid()
-            const quizLink=`http://localhost:3000/play-quiz/${quizId}`
+            const quizLink=`http://localhost:4000/play-quiz/${quizId}`
             setQuizLink(quizLink)
         } catch (error) {
             console.log(error)
@@ -266,7 +266,7 @@ function QuizQuestion({ onCancel, quizType, quizName }) {
             
             {quizLink && (
                 <div className={styles.quizLink}>
-                    <p>Quiz Link:</p>
+                    <p>Congrats your Quiz is Published!</p>
                     <a href={quizLink} target="_blank" rel="noopener noreferrer">
                         {quizLink}
                     </a>
