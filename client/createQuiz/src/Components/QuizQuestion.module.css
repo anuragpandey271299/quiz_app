@@ -1,0 +1,110 @@
+.quizquestion{
+    height: fit-content;
+    width: 50vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.quizquestion .btns button{
+    background:none;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    height: 47px;
+    width: 47px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+button:hover{   /*For all buttons*/
+    cursor: pointer;
+}
+.quizquestion .btns{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+.quizquestion .newquestion{
+   position: relative;
+}
+.quizquestion .newquestion p{
+    position: absolute;
+    top: -4px;
+    right: 0;
+    cursor: pointer;
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+}
+.quizquestion .newquestion p:hover{
+    scale: 1.6;
+}
+.quizquestion .btns .selected button{
+    box-shadow: none;
+    border: 3px solid rgb(0, 222, 0);
+}
+.quizquestion input{
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+#optionInput{
+    width: 40%;
+}
+#questionInput{
+    width: 100%;
+}
+.quizquestion .bottomBtns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.quizquestion .bottomBtns button{
+    font-size: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 15px 0;
+}
+.quizquestion .bottomBtns{
+    margin-top: 20px;
+    gap:20px;
+}
+.quizquestion .cancel{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.quizquestion .cancel:hover{
+    background-color: gray;
+    transition: all 0.4s;
+}
+.quizquestion .continue{
+    box-shadow: 0 0 10px rgba(92, 241, 6, 0.5);
+    background-color: #60B84B;
+    color: white;
+}
+.quizquestion .continue:hover{
+    background-color: green;
+    transition: all 0.4s;
+}
+#optionaddbtn{
+    background: none;
+    border: 1.5px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-left: 28px;
+    width: 40%;
+    height: 47px;
+    margin-top: 5px;
+}
+.quizquestion .timer{
+    position: absolute;
+    bottom: 25%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    color: gray;
+}
+.quizquestion .timer h4{
+    text-align: center;
+}

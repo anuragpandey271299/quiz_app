@@ -1,0 +1,44 @@
+.UserFormPage{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #F2F2F2;
+}
+.UserFormPage .head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(6, 48, 238, 0.7);
+}
+.UserFormPage .buttons{
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+}
+.UserFormPage .buttons button{
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    background: none;
+    font-size: 40px;
+}
+.UserFormPage .selectedButton{
+    box-shadow: 0 0 10px rgba(238, 76, 6, 0.7);
+}
+.head h1{
+    font-size: 100px;
+    font-family: 'Jomhuria', serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #474444;
+}
+
+.UserFormPage button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 100px rgba(0, 0, 255, 0.7);
+}

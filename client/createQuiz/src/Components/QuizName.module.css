@@ -1,0 +1,67 @@
+.QuizName{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+    border-radius: 15px;
+    height: 35vh;
+    width: 50vw;
+    font-size: 20px;
+    justify-content: space-between;
+}
+.QuizName input{
+    font-size: 20px;
+    padding: 10px;
+}
+.QuizName .btns button{
+    font-size: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 15px 0;
+}
+.QuizName .btns button:hover{
+    cursor: pointer;
+}
+.btns .cancel{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.btns .cancel:hover{
+    background-color: gray;
+    transition: all 0.4s;
+}
+.QuizName .QuizType .selected{
+    background-color: #60B84B;
+    color: white;
+}
+.btns .continue:hover{
+    background-color: green;
+    transition: all 0.4s;
+}
+.btns .continue{
+    box-shadow: 0 0 10px rgba(92, 241, 6, 0.5);
+    background-color: #60B84B;
+    color: white;
+}
+.QuizName .QuizType{
+    display: flex;
+    justify-content: space-between;
+}
+.QuizName .QuizType button{
+    background:none;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.QuizType button:hover{
+    cursor: pointer;
+}
+.QuizName .btns{
+    display: flex;
+    justify-content: space-around;
+    gap:20px;
+}
+.QuizName .QuizType button{
+    font-size: 20px;
+}
