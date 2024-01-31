@@ -6,13 +6,16 @@ const quiz=require('../Models/quiz')
 router.post('/addquiz',isLoggedIn,async (req, res) => {
     try{
         const userID=req.user._id
-        const { quizName, quizType, questions } = req.body;
+        const { quizName, quizType, questions, quizId, totalImpressions, impressions } = req.body;
 
         const createdQuiz = await quiz.create({
           userID,
           quizName,
           quizType,
           questions,
+          quizId,
+          totalImpressions,
+          impressions
         });
         res.send(createdQuiz)
     }catch(error){
