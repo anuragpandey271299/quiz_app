@@ -108,3 +108,31 @@ button:hover{   /*For all buttons*/
 .quizquestion .timer h4{
     text-align: center;
 }
+.quizLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quizLink p{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px;
+}
+.quizLink a{
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #EDEDED;
+    color: #474444;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+.quizLink button{
+    border: none;
+    width: 200px;
+    padding: 10px 20px;
+    background-color:#60B84B;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 15px;
+}

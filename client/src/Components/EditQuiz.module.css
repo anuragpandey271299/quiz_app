@@ -1,0 +1,58 @@
+.editquiz .questions{
+    width: 60vw;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+.editquiz .buttons{
+    display: flex;
+    justify-content: center;
+    gap:50px
+}
+.editquiz button{
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    width: 200px;
+}
+.editquiz .saveBtn{
+    background-color: #60B84B;
+    color: white;
+}
+.editquiz .closeBtn{
+    color: crimson;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.editquiz .questionDiv{
+    margin-bottom: 10px;
+}
+
+.editquiz .op{
+    display: flex;
+    flex-direction: column;
+}
+.editquiz .optionSection{
+    display: flex;
+    justify-content: flex-start;
+    gap:20px
+}.editquiz h3{
+    color: #5076FF;
+    font-size: 30px;
+    padding-left: 20px;
+}
+.editquiz .questions .questionLabel{
+    font-weight: 600;
+    font-size: 20px;
+}
+.editquiz .questions .questionInput{
+    font-size: 20px;
+    padding: 5px;
+}
+.editquiz .optionInput{
+    font-size: 15px;
+    padding: 5px;
+}

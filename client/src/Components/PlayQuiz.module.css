@@ -1,0 +1,121 @@
+.playquiz{
+    background-color: #041325;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playquiz .quizdiv{
+    background-color: white;
+    height: fit-content;
+    width: 70vw;
+    border-radius: 10px;
+    padding: 20px;
+}
+.playquiz .questionNumber{
+    display: flex;
+    justify-content: space-between;
+}
+.playquiz .topOption{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: fit-content;
+}
+.playquiz .topOption p{
+    border: 2px solid black;
+    width: 350px;
+    margin: 10px;
+    border-radius: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playquiz h1{
+    text-align: center;
+}
+.quizdiv .nextBtn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.quizdiv .nextBtn button{
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 15px 30px;
+    background-color: #60B84B;
+    color: white;
+}
+.quizdiv .nextBtn button:hover{
+    background-color: green;
+}
+#qnum{
+    font-size: 25px;
+    font-weight: bold;
+}
+.quizdiv .questionNumber .timer{
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+}
+.playquiz .topOption img{
+    width: 350px;
+    height: 200px;
+    margin: 10px;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+.playquiz .topOption .selected{
+    border: 5px solid #5076FF;
+}
+.quizdiv .topOption img:hover{
+    cursor: pointer;
+}
+.quizdiv .topOption p:hover{
+    cursor: pointer;
+}
+.quizdiv .topOption .imgtxt{
+    display: flex;
+    border: none;
+    border-radius: 10px;
+    align-items: center;
+    width: 400px;
+}
+.quizdiv .topOption .imgtxt{
+    border: 5px solid white;
+    margin: 10px;
+}
+.quizdiv .topOption .imgtxt img{
+    width: 150px;
+    height: 100px;
+}
+.quizdiv .topOption .imgtxt p{
+    border: none;
+    font-size: 30px;
+}
+.quizdiv .topOption .imgtxt.selected {
+    border: 5px solid #5076FF; 
+}
+.quizdiv .topOption .imgtxt:hover{
+    cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+    .playquiz .quizdiv {
+      width: 90vw;
+    }
+    .playquiz .topOption p {
+      width: 100%;
+    }
+
+    .playquiz .topOption img {
+      width: 50%;
+      height: 50%;
+    }
+
+  }
+  

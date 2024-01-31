@@ -1,0 +1,120 @@
+
+.dashboardContainer{
+    background-color: #EDEDED;
+    width: 80vw;
+    height: 100vh;
+}
+
+.dashboardContainer .dashboardHead{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-left: 120px;
+}
+.dashboardContainer .dashboardHead .quizstates{
+    display: flex;
+}
+
+.dashboardContainer .dashboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dashboardContainer .dashboard .quizNumber{
+    color: #FF5D01;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dashboardContainer .dashboard .questionNumber{
+    color: #60B84B;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dashboardContainer .dashboard .impressionNumber{
+    color: #5076FF;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dashboard .trendingHead{
+    font-size: 30px;
+}
+.dashboardContainer #loading{
+    position: absolute;
+    top: 30%;
+    left: 55%;
+}
+.dashboard .trending{
+    display: flex;
+    justify-content: center;
+}
+.dashboard .trending .quizNameDiv{
+    border: 2px solid black;
+    background-color: white;
+    width: fit-content;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+.dashboard .trending .quizNameDiv .impression img{
+    width: 23px;
+    height: 23px;
+}
+.dashboard .trending .quizNameDiv .impression{
+    display: flex;
+    width: 50px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 50px;
+}
+.dashboard .trending .quizNameDiv .quizInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard .trending .quizNameDiv #quizDate{
+    font-size: 15px;
+    text-align: left;
+    font-weight: bold;
+    color: #60B84B;
+    letter-spacing: 0.4px;
+
+}
+.dashboard .trending .quizNameDiv .impression p{
+    font-size: 27px;
+    color: #FF5D01;
+    height: 38px;
+}
+.dashboard .trending .quizNameDiv .quizInfo:first-child{
+    font-weight: bold;
+    color: #474444;
+}
+.trendingHead h3{
+    color: #474444;
+    margin: 10px;
+}
+.dashboard .trending{
+    width: 70vw;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    max-height: 400px;
+    overflow-y: auto;
+}

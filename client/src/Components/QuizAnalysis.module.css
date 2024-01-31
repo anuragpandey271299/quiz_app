@@ -1,0 +1,66 @@
+.quizAnalysisContainer {
+   width: 80vw;
+
+   height: 100vh;
+}
+
+.quizAnalysisContainer h3 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 10px;
+    color: #5076FF;
+}
+
+.quizAnalysisContainer .questionStats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.questionStats .questionStatsData h6{
+    font-size: 20px;
+    color: gray;
+}
+
+.quizAnalysisContainer .allquestions {
+    padding: 5px 60px;
+    margin: 10px;
+}
+
+.quizAnalysisContainer .questionStats .questionStatsData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.quizAnalysisContainer .questionStats .questionStatsData p:first-child{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.quizAnalysisContainer #questionText {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.quizAnalysisContainer .quizInfo{
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 500;
+    color: #FF5D01;
+}
+.quizAnalysisContainer .quizInfo p{
+    float: right;
+}
+.quizAnalysisContainer button{
+    border: 2px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 200px;
+    position: fixed;
+    bottom:  20px;
+    left: 50vw;
+}
