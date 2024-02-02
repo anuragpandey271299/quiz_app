@@ -17,7 +17,7 @@ function EditQuiz({ quizId, onClose, onEditSuccess }) {
           },
         };
 
-        const response = await axios.get(`http://localhost:5000/getquiz/${quizId}`, config);
+        const response = await axios.get(`https://quizzieapp-h7ds.onrender.com/getquiz/${quizId}`, config);
         const quizDetails = response.data;
 
         const correctOptionsFromDB = quizDetails.questions.map(question => question.correctOption);
@@ -41,7 +41,7 @@ function EditQuiz({ quizId, onClose, onEditSuccess }) {
         },
       };
 
-      const response = await axios.put(`http://localhost:5000/quizzes/${quizId}`, {
+      const response = await axios.put(`https://quizzieapp-h7ds.onrender.com/quizzes/${quizId}`, {
         questions,
       }, config);
 

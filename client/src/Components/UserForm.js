@@ -24,7 +24,7 @@ function UserForm({ forLogin, onFormSubmit }) {
                 toast.error('Passwords did not match')
                 return
             }
-            const response = await axios.post('http://localhost:5000/signupuser', { name, email, password })
+            const response = await axios.post('https://quizzieapp-h7ds.onrender.com/signupuser', { name, email, password })
             console.log(response.data)
             if (response.status === 201) {
                 toast.success('Registered successfully')
@@ -37,7 +37,7 @@ function UserForm({ forLogin, onFormSubmit }) {
                 toast.warning('Email and password required')
                 return
             }
-            const response = await axios.post('http://localhost:5000/loginuser', { email, password })
+            const response = await axios.post('https://quizzieapp-h7ds.onrender.com/loginuser', { email, password })
             console.log(response.data)
             const jwtoken = response.data.jwt
             localStorage.setItem('jwtoken',jwtoken)

@@ -21,13 +21,13 @@ function QuizAnalysis({ quizId, onClose }) {
                     },
                 };
 
-                const quizzesResponse = await axios.get('http://localhost:5000/quizzes', config);
+                const quizzesResponse = await axios.get('https://quizzieapp-h7ds.onrender.com/quizzes', config);
                 setAllQuizzes(quizzesResponse.data);
 
                 const selectedQuiz = quizzesResponse.data.find(quiz => quiz.quizId === quizId);
                 setQuizData(selectedQuiz);
 
-                const analysisResponse = await axios.get(`http://localhost:5000/quizzes/${quizId}/question-analysis`, config);
+                const analysisResponse = await axios.get(`https://quizzieapp-h7ds.onrender.com/quizzes/${quizId}/question-analysis`, config);
                 setAnalysisData(analysisResponse.data);
 
                 setLoading(false);
@@ -52,7 +52,7 @@ function QuizAnalysis({ quizId, onClose }) {
                 };
 
                 
-                const additionalDataResponse = await axios.get(`http://localhost:5000/getquiz/${quizId}`, config);
+                const additionalDataResponse = await axios.get(`https://quizzieapp-h7ds.onrender.com/getquiz/${quizId}`, config);
                 setAdditionalData(additionalDataResponse.data);
                 setQuizType(additionalDataResponse.data.quizType);
                 

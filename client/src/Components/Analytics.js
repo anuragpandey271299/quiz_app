@@ -27,7 +27,7 @@ function Analytics() {
         },
       };
 
-      const quizzesData = await axios.get('http://localhost:5000/quizzes', config);
+      const quizzesData = await axios.get('https://quizzieapp-h7ds.onrender.com/quizzes', config);
       console.log(quizzesData.data);
       setQuizzes(quizzesData.data);
     } catch (error) {
@@ -77,7 +77,7 @@ function Analytics() {
         },
       };
 
-      await axios.delete(`http://localhost:5000/quizzes/${deleteConfirmationId}`, config);
+      await axios.delete(`https://quizzieapp-h7ds.onrender.com/quizzes/${deleteConfirmationId}`, config);
       setDeleteConfirmationId(null);
       fetchQuizData();
     } catch (error) {

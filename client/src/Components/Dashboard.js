@@ -21,13 +21,13 @@ function Dashboard() {
             'Content-Type': 'application/json',
           },
         };
-        const response = await axios.get('http://localhost:5000/quizStats', config);
+        const response = await axios.get('https://quizzieapp-h7ds.onrender.com/quizStats', config);
         console.log(response.data);
         setTotalQuiz(response.data.totalQuizCount);
         setTotalQuestions(response.data.totalQuestionCount);
         setTotalImpression(response.data.totalImpressionCount);
 
-        const quizzesData = await axios.get('http://localhost:5000/quizzes', config);
+        const quizzesData = await axios.get('https://quizzieapp-h7ds.onrender.com/quizzes', config);
         console.log(quizzesData.data);
         setQuizzes(quizzesData.data);
       } catch (error) {

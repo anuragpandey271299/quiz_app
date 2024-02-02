@@ -143,7 +143,7 @@ function QuizQuestion({ onCancel, quizType, quizName }) {
                     'Content-Type': 'application/json',
                 },
             };
-            const response = await axios.post('http://localhost:5000/addquiz', { quizName, quizType, questions, quizId }, config)
+            const response = await axios.post('https://quizzieapp-h7ds.onrender.com/addquiz', { quizName, quizType, questions, quizId }, config)
             console.log(response.data)
 
         } catch (error) {

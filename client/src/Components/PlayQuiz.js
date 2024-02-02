@@ -29,7 +29,7 @@ function PlayQuiz() {
           },
         };
 
-        const response = await axios.post(`http://localhost:5000/incrementImpression/${quizId}`, { quizId }, config);
+        const response = await axios.post(`https://quizzieapp-h7ds.onrender.com/incrementImpression/${quizId}`, { quizId }, config);
         console.log(response.data);
       } catch (error) {
         console.log(error);
@@ -48,7 +48,7 @@ function PlayQuiz() {
             'Content-Type': 'application/json',
           },
         };
-        const response = await axios.get(`http://localhost:5000/getquiz/${quizId}`, config);
+        const response = await axios.get(`https://quizzieapp-h7ds.onrender.com/getquiz/${quizId}`, config);
 
         console.log(response.data);
         setQuizData(response.data);
@@ -78,7 +78,7 @@ function PlayQuiz() {
           },
         };
 
-        const additionalDataResponse = await axios.get(`http://localhost:5000/getquiz/${quizId}`, config);
+        const additionalDataResponse = await axios.get(`https://quizzieapp-h7ds.onrender.com/getquiz/${quizId}`, config);
         console.log(additionalDataResponse.data);
         setAdditionalData(additionalDataResponse.data);
         setQuizType(additionalDataResponse.data.quizType);
@@ -109,7 +109,7 @@ function PlayQuiz() {
         },
       };
 
-      const newResponse = await axios.put(`http://localhost:5000/quizzes/${quizId}/answer-question`, {
+      const newResponse = await axios.put(`https://quizzieapp-h7ds.onrender.com/quizzes/${quizId}/answer-question`, {
         questionId: quizData.questions[currentQuestionIndex]._id,
         selectedOption,
       }, config);
