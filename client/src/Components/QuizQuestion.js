@@ -134,7 +134,7 @@ function QuizQuestion({ onCancel, quizType, quizName }) {
         
         try {
             const quizId = nanoid()
-            const quizLink = `http://localhost:3000/play-quiz/${quizId}`
+            const quizLink = `https://mern-quizzie-app.netlify.app/play-quiz/${quizId}`
             setQuizLink(quizLink)
             const jwtoken = localStorage.getItem('jwtoken')
             const config = {

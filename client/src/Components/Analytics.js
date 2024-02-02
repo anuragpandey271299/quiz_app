@@ -152,7 +152,7 @@ function Analytics() {
                             <img
                               src={shareIMG}
                               alt='shareIMG'
-                              onClick={() => handleShareClick(`http://localhost:3000/play-quiz/${quiz.quizId}`)}
+                              onClick={() => handleShareClick(`https://mern-quizzie-app.netlify.app/play-quiz/${quiz.quizId}`)}
                               style={{ cursor: 'pointer' }}
                             />
                           </td>
